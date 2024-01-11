@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  check_python_version:
-    runs-on: windows-latest
+  check_python:
+    runs-on:  ${{ matrix.os }}
 
     steps:
     - name: Checkout Repository
