@@ -22,13 +22,14 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Update pip
+    - name: Install pip
       run: |
         (Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py) -and (python get-pip.py --force-reinstall)
-
+    
     - name: Install flake8
       run: |
         python -m pip install flake8
+
 
     - name: Run flake8
       run: |
