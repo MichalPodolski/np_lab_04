@@ -1,4 +1,4 @@
-name: check_pythin_version
+name: Check Python Version
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  check_python:
-    runs-on: ubuntu-latest
+  check_python_version:
+    runs-on: windows-latest
 
     steps:
     - name: Checkout Repository
