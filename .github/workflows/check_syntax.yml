@@ -7,7 +7,7 @@ on:
 
 jobs:
   check_syntax:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     strategy:
       matrix:
@@ -33,6 +33,9 @@ jobs:
     - name: Display Python Version
       run: python --version
 
+    - name: Run flake8
+      run: |
+        python -m flake8 .
     - name: Run flake8
       run: |
         flake8 .
